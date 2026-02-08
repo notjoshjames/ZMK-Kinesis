@@ -46,15 +46,6 @@
     macros {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        L-CMD {
-            bindings = <&kp LCMD>;
-            key-positions = <35>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
