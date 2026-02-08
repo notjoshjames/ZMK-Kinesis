@@ -18,7 +18,7 @@
             bindings = <&kp>, <&kp>;
         };
         
-        // Thumb Tab/Cmd - tap preferred for quick tabs
+        // Thumb Tab/Cmd
         th_tab: thumb_tab {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_TAB";
@@ -42,7 +42,7 @@
             bindings = <&kp>, <&kp>;
         };
         
-        // Thumb Nav keys (Home/End/PgUp/PgDn) - hold preferred since you don't use taps yet
+        // Thumb Nav keys - hold preferred
         th_nav: thumb_nav {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_NAV";
@@ -59,28 +59,28 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = 
- &kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &tog 1                                                                    &mo 1 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
- &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &none                                                                     &none &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSLH
- &kp CAPS &hm LSHIFT A &hm LCTRL S &hm LALT D &hm LGUI F &kp G &kp LCTRL &kp LALT                 &kp LGUI &kp LCTRL &kp H &hm RGUI J &hm RALT K &hm RCTRL L &hm RSHIFT SEMI &kp SQT
- &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B                                                                               &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
- &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                                                                                        &kp UP &kp DOWN &kp LBKT &kp RBKT
-                        &th_tab LGUI TAB &th_esc LSHIFT ESC                                         &th_tab RGUI TAB &th_esc RSHIFT ESC
-                        &kp BSPC &kp DEL                                                             &kp SPACE &kp RET
-                        &th_nav LCTRL HOME &th_nav LALT END                                         &th_nav RCTRL PG_UP &th_nav RALT PG_DN
+            bindings = <
+ &kp EQUAL  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog 1                                                                   &mo 1     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+ &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T     &none                                                                    &none     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+ &kp CAPS   &hm LSHIFT A &hm LCTRL S &hm LALT D &hm LGUI F &kp G &kp LCTRL &kp LALT                                  &kp LGUI  &kp LCTRL &kp H     &hm RGUI J &hm RALT K &hm RCTRL L &hm RSHIFT SEMI &kp SQT
+ &kp LSHIFT &kp Z     &kp X     &kp C     &kp V     &kp B                                                                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHIFT
+ &mo 1      &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                                                                              &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo 1
+                                          &th_tab LGUI TAB   &th_esc LSHIFT ESC                          &th_tab RGUI TAB   &th_esc RSHIFT ESC
+                                          &kp BSPC           &kp DEL                                     &kp SPACE          &kp RET
+                                          &th_nav LCTRL HOME &th_nav LALT END                           &th_nav RCTRL PG_UP &th_nav RALT PG_DN
             >;
         };
 
         fn_layer {
-            bindings = 
- &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &trans                                                                       &trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
- &trans &trans &trans &trans &trans &trans &trans                                                                       &trans &trans &trans &trans &trans &trans &trans
- &trans &trans &trans &trans &trans &trans &trans &trans                                             &trans &trans &trans &trans &trans &trans &trans &trans
- &trans &trans &trans &trans &trans &trans                                                                                     &trans &trans &trans &trans &trans &trans
- &trans &trans &trans &trans                                                                                                          &trans &trans &trans &trans
-                              &trans &trans                                                           &trans &trans
-                              &trans &trans                                                           &trans &trans
-                              &trans &trans                                                           &trans &trans
+            bindings = <
+ &kp F1     &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &trans                                                                   &trans    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+ &trans     &trans    &trans    &trans    &trans    &trans    &bootloader                                                              &bootloader &trans  &trans    &trans    &trans    &trans    &trans
+ &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans                          &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+ &trans     &trans    &trans    &trans    &trans    &bt BT_CLR                                                                         &trans    &trans    &trans    &trans    &trans    &trans
+ &trans     &trans    &trans    &trans    &trans                                                                                                 &trans    &trans    &trans    &trans    &trans
+                                          &trans             &trans                                      &trans             &trans
+                                          &trans             &trans                                      &trans             &trans
+                                          &trans             &trans                                      &trans             &trans
             >;
         };
     };
