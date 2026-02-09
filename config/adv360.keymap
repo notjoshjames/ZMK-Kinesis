@@ -23,7 +23,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick_tap_ms = <150>;
             require-prior-idle-ms = <150>;
         };
 
